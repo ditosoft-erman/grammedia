@@ -6,20 +6,20 @@ import "./index.css";
 // import { Landing } from "./pages/Landing";
 import { About } from "./pages/About";
 import { SkillsMarquee } from "./components/SkillsMarquee";
-import { Achievements } from "./pages/Achievements";
+// import { Achievements } from "./pages/Achievements";
 import IntroLanding from './pages/IntroLanding';
-import { Projects } from "./pages/Projects";
+// import { Projects } from "./pages/Projects";
 import { Preloader } from "./pages/Preloader";
-import { Testimony } from "./pages/Testimony";
+// import { Testimony } from "./pages/Testimony";
 import  {FineWorks}  from "./pages/FineWorks";
 import {PromotionalVideo} from "./pages/PromotionalVideo";
 import {Offers} from "./pages/Offers";
 
-import { Certificates } from "./pages/Certificates";
-import { Contact } from "./pages/Contact";
-import { Quote } from "./pages/Quote";
-import Stack from "./pages/Stack";
-import Jobs from "./pages/Jobs";
+// import { Certificates } from "./pages/Certificates";
+// import { Contact } from "./pages/Contact";
+// import { Quote } from "./pages/Quote";
+// import Stack from "./pages/Stack";
+// import Jobs from "./pages/Jobs";
 import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "./components/Navbar";
 
@@ -50,20 +50,20 @@ function App() {
 					<PromotionalVideo/>
 					<Offers/>
 			
-					<Jobs />
+					{/* <Jobs />
 					<Achievements />
-					<Quote />
+					<Quote /> */}
 				</div>
 				<div id='projects'>
-					<Stack />
-					<Projects />
+					{/* <Stack />
+					<Projects /> */}
 				</div>
 				<div id='testimonials'>
-					<Testimony />
+					{/* <Testimony /> */}
 				</div>
 				<div id='contact'>
-					<Certificates />
-					<Contact />
+					{/* <Certificates />
+					<Contact /> */}
 					<SkillsMarquee />
 				</div>
 				<Analytics />

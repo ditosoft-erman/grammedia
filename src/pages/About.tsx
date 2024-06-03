@@ -12,19 +12,10 @@ export const About: FC = () => {
 
 
   return (
-    <div id="about" className="w-full p-4 bg-black xxxs:h-[850px]">
+    <div id="about" className="w-full p-4 bg-black xxxs:h-[650px]">
       <div className="container">
-        <div className="row items-center">
-          <div className="xxxs:col col-span-1 md:col col-md-6">
-            <motion.img
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              src={allen}
-              alt="Grammer Allen"
-              style={{ width: "450px", height: "500px" }}
-          
-            />
-          </div>
+        <div className="flex row items-center justify-around ">
+        
           <div className="col col-lg-5 pt-14">
             {/* <ScrollAnimation animateIn="fadeIn" delay={50}>
               <p className="font-head font-semibold">Hi! I'm</p>
@@ -45,6 +36,16 @@ export const About: FC = () => {
               </p>
             </ScrollAnimation>
            
+          </div>
+		    <div className="xxxs:col col-span-1 md:col col-md-4">
+            <motion.img
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 0.9 }}
+              src={allen}
+              alt="Grammer Allen"
+              style={{ width: "450px", height: "500px"  }}
+          
+            />
           </div>
         </div>
       </div>
