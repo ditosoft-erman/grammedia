@@ -21,9 +21,7 @@ import { Quote } from "./pages/Quote";
 import Stack from "./pages/Stack";
 import Jobs from "./pages/Jobs";
 import { Analytics } from "@vercel/analytics/react";
-
 import { Navbar } from "./components/Navbar";
-import FaveSongs from "./pages/FaveSongs";
 
 
 function App() {
@@ -51,7 +49,7 @@ function App() {
 					<FineWorks/>
 					<PromotionalVideo/>
 					<Offers/>
-					<FaveSongs />
+			
 					<Jobs />
 					<Achievements />
 					<Quote />

@@ -24,7 +24,7 @@ export const Offers: React.FC = () => {
      
         </div>
         <div
-          className="w-52 h-52 bg-sculpting bg-cover rounded-md px-16 flex justify-center items-center"
+          className="w-52 h-52 bg-sculpting bg-cover bg-white rounded-md px-16 flex justify-center items-center"
         >
   
         </div>
