@@ -40,11 +40,11 @@ export default {
 				inter: ['Inter', 'sans-serif'],
 			},
 			backgroundImage: {
-				fine: "url(../../src/assets/fine-works.png)",
-				'sculpting': "url('src/assets/gif/continuity.gif');",
-				'viral-editing': "url('src/assets/gif/editing.gif')",
-				'specific': "url('src/assets/gif/specific.gif')",
-				'partnership': "url('src/assets/gif/partnership.gif')",
+				fine: "url('/src/assets/fine-works.png')",
+				'sculpting': "url('/src/assets/gif/continuity.gif')",
+				'viral-editing': "url('/src/assets/gif/editing.gif')",
+				'specific': "url('/src/assets/gif/specific.gif')",
+				'partnership': "url('/src/assets/gif/partnership.gif')",
 			}
 		},
 	},
