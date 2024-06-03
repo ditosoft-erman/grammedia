@@ -1,0 +1,80 @@
+
+
+
+.text-container{
+    font-size: 40px;
+  }
+  
+  .gradient-text{
+    background: linear-gradient(90deg, #4AEAB7 0%, rgba(4, 99, 239, 0.79) 115.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+  }
+  
+  
+  .m {
+    background: linear-gradient(180deg, #ffffff 0%, rgb(168, 168, 168) 115.56%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .line-one{
+    background: rgb(94,255,100);
+  background: linear-gradient(90deg, rgba(94,255,100,1) 0%, rgba(47,79,205,1) 100%);
+  }
+  
+  .line-two{
+    background: rgb(231,0,255);
+    background: linear-gradient(56deg, rgba(231,0,255,1) 0%, rgba(0,7,165,1) 100%);
+  }
+  
+  .line-three{
+    background: rgb(86,55,197);
+    background: linear-gradient(56deg, rgba(86,55,197,1) 0%, rgba(0,7,165,0) 100%);
+  }
+  
+  
+  
+  /* MOBILE LARGE XS*/
+  @media only screen and (min-width: 414px) {
+    
+    }
+    
+    /* LAPTOP SMALL SM*/
+    @media only screen and (min-width: 768px) {
+
+    }
+    
+    /* TABLET PORTRAIT MD-P */
+    @media only screen and (min-width: 601px) and (max-width: 961px) {
+  
+    }
+    
+    /* TABLET LANDSCAPE MD-LS */
+    @media only screen and (min-width: 1024px) {
+     
+    }
+    
+    /* LAPTOP LG MAC BOOK */
+        @media only screen and (min-width: 1280px) {
+        
+    }
+    
+    /* DESKTOP SMALL XL */
+    @media only screen and (min-width: 1536px) {
+      
+    }
+    
+    /* DESKTOP LARGE 2XL */
+    @media only screen and (min-width: 1920px) {
+      
+    }
+    
+    /* SMART TV 3XL*/
+    @media only screen and (min-width: 3840px) {
+      
+    }
+    

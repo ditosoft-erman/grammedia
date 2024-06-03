@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Gabarito:wght@500&family=Kanit:wght@600&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@400;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+body {
+	overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: rgba(255, 255, 255, 0);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: transparent;
+	border-radius: 40px;
+}
+
+.parent {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.bm-burger-button {
+	position: fixed;
+	width: 36px;
+	height: 30px;
+	right: 45px;
+	top: 20px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+	background: #000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+	position: absolute;
+	right: 15px;
+	top: -20px;
+	height: 90px;
+	width: 90px;
+}
+
+.bm-cross-button > button {
+	position: absolute;
+	left: -70px;
+	top: -20px;
+}
+
+.bm-cross {
+	right: 38px;
+	bottom: 8px;
+	background: #bdc3c7;
+	width: 75px;
+	height: 75px;
+}
+
+/* adjust the width and height of the first span in bm-cross */
+span.bm-cross > span:nth-child(1) {
+	width: 7px;
+	height: 28px;
+}
+
+.bm-menu-wrap {
+	position: fixed;
+	height: 100%;
+}
+
+.bm-menu {
+	position: absolute;
+	width: 100vw;
+	background: #000;
+	padding: 2.5em 1.5em 0;
+	font-size: 1.15em;
+	height: 120vh;
+	top: -40px;
+}
+
+.bm-morph-shape {
+	fill: #373a47;
+}
+
+.bm-item-list {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	color: #b8b7ad;
+	padding: 50px 0 0 0.8em;
+	font-family: "Gabarito", sans-serif;
+}
+
+.bm-item-list a {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.bm-overlay {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.mouseHover {
+	color: #000;
+	font-size: 15px;
+	text-decoration: none;
+	position: relative;
+}
+
+.mouseHover::after {
+	content: "";
+	background-color: #cb594c;
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 0;
+	height: 2px;
+	transition: width 0.5s;
+}
+
+.mouseHover:hover::after {
+	width: 100%;
+}
+
+.hoverBtn:hover {
+	background-color: #fff;
+	color: #cb594c;
+	transition: 0.5s;
+}
+
+.carousel-cert {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: infinite-scroll 4s linear infinite;
+}
+
+@keyframes infinite-scroll {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(50%, 0%);
+	}
+}
+
+h1.customHover {
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+h1.customHover::before {
+	content: "";
+	position: absolute;
+	width: 0%; /* Adjust the width as needed */
+	height: 2.9px; /* Adjust the underline thickness as needed */
+	background-color: #cb594c; /* Replace with your desired underline color */
+	top: calc(
+		50% + 45px
+	); /* Center it vertically, adjust 5px based on your font size */
+	left: 50%; /* Center it horizontally */
+	transform: translateX(
+		-50%
+	); /* Move it back by half of its width to center it */
+	transition: width 0.3s ease-in-out;
+}
+
+h1.customHover:hover::before {
+	width: 55%;
+}
+
+.pulse {
+	animation: pulseAnimation 3s infinite;
+}
+
+@keyframes pulseAnimation {
+	0% {
+		text-shadow: 0 0 10px #fb8b7f, 0 0 15px #cb594c, 0 0 20px #cb594c,
+			0 0 50px #cb594c;
+	}
+	50% {
+		text-shadow: 0 0 10px #fb8b7f, 0 0 15px #cb594c, 0 0 20px #cb594c,
+			0 0 50px #cb594c;
+	}
+	100% {
+		text-shadow: 0 0 10px #fb8b7f, 0 0 15px #cb594c, 0 0 20px #cb594c,
+			0 0 50px #cb594c;
+	}
+}
+
+.hovered {
+	animation: scale 0.3s ease-in-out;
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(0.9);
+	}
+	50% {
+		transform: scale(1);
+	}
+}
+
+.unhovered {
+	animation: scaleOut 0.3s ease-in-out;
+}
+
+@keyframes scaleOut {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0.9);
+	}
+}
+
+.active {
+	cursor: pointer;
+	padding: 8px 12px;
+	background-color: white;
+	color: black;
+	border-radius: 20px;
+	transition: 0.4s ease-in-out;
+}

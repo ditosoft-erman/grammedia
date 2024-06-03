@@ -1,0 +1,53 @@
+import { FC } from "react";
+// import me from "../assets/me.webp";
+import allen from "../assets/grammer2.png";
+import ScrollAnimation from "react-animate-on-scroll";
+import { motion } from "framer-motion";
+
+import "./about.css"
+
+
+export const About: FC = () => {
+
+
+
+  return (
+    <div id="about" className="w-full p-4 bg-black xxxs:h-[850px]">
+      <div className="container">
+        <div className="row items-center">
+          <div className="xxxs:col col-span-1 md:col col-md-6">
+            <motion.img
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              src={allen}
+              alt="Grammer Allen"
+              style={{ width: "450px", height: "500px" }}
+          
+            />
+          </div>
+          <div className="col col-lg-5 pt-14">
+            {/* <ScrollAnimation animateIn="fadeIn" delay={50}>
+              <p className="font-head font-semibold">Hi! I'm</p>
+            </ScrollAnimation> */}
+            <ScrollAnimation animateIn="fadeIn" delay={150}>
+              <h1 className="font-title font-bold my-3 xxxs:text-2xl lg:text-3xl xl:text-6xl text-white">
+                Who is<span className="gradient-text"> Grammedia?</span>
+              </h1>
+            </ScrollAnimation>
+
+            <ScrollAnimation animateIn="fadeIn" delay={150}>
+              <p className="font-text text-justify pb-6 xxxs:text-xs md:text-md lg:text-sm xl:text-lg text-white">
+                I'm Grammer Allen, a skilled video editor driven to create
+                captivating content that propels your business or brand. I'm
+                also the founder of Gram Media, born from a passion for content
+                creation and a mission to empower fellow creators through
+                valuable resources and support.
+              </p>
+            </ScrollAnimation>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
