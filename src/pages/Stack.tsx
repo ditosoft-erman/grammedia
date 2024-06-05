@@ -20,7 +20,7 @@ const Stack: FC = () => {
                 </span>
                 .
               </h1>
-              <p className="font-text xxxs:w-full xl:text-xl w-10/12 text-white">
+              <p className="font-text xxxs:w-9/12 xxs:w-full md: xl:text-xl lg:w-3/4 text-justify  text-white">
                 Through my immersion in various video editing software and
                 techniques, I've honed my skills across multiple projects. These
                 experiences continually sharpen my abilities as I eagerly
