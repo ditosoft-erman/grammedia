@@ -18,7 +18,7 @@ import {Offers} from "./pages/Offers";
 // import { Certificates } from "./pages/Certificates";
 // import { Contact } from "./pages/Contact";
 // import { Quote } from "./pages/Quote";
-// import Stack from "./pages/Stack";
+import Stack from "./pages/Stack";
 // import Jobs from "./pages/Jobs";
 import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "./components/Navbar";
@@ -55,8 +55,8 @@ function App() {
 					<Quote /> */}
 				</div>
 				<div id='projects'>
-					{/* <Stack />
-					<Projects /> */}
+					<Stack />
+					{/* <Projects /> */}
 				</div>
 				<div id='testimonials'>
 					{/* <Testimony /> */}
