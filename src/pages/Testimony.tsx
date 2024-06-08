@@ -1,7 +1,8 @@
 import { FC, useState, useEffect } from "react";
-import logo from "../assets/logo.svg";
+
 import test from "../data/test.json";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import  "../pages/about.css"
 
 export const Testimony: FC = () => {
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -27,44 +28,38 @@ export const Testimony: FC = () => {
 
 	return (
 		<div
-			className='w-full h-full bg-main'
+			className='w-full h-full bg-black'
 			id='testimony'>
 			<div className='container'>
-				<h1 className='text-black font-bold p-10 font-sub xxxs:text-2xl md:text-4xl'>
+				<h1 className='gradient-text font-bold p-10 font-sub xxxs:text-2xl md:text-7xl text-center'>
 					Testimonials
 				</h1>
-				<img
-					src={logo}
-					className='w-64 h-auto absolute right-10 rotate-3'
-					alt='logo'
-				/>
+			
 				<div className='xxxs:mt-14 p-0 md:mt-40 px-10'>
 					<div className='flex flex-col gap-40'>
 						{test.map((testimony, idx) => (
 							<ParallaxProvider key={idx}>
 								<Parallax
-									speed={-5}
-									translateX={["-500px", "1000px"]}>
+									speed={1}
+									translateY={["0px", "-1000px"]}>
 									<div
 										id='testimony'
-										className='flex flex-col gap-4 py-24 border-t-2 border-zinc-400 lg:px-36'>
+										className='flex flex-col gap-4 py-24 border-t-2 border- lg:px-36'>
 										<div className='flex gap-10'>
-											<h1 className='xxxs:text-semi font-bold text-[100px] font-span'>
+											<h1 className='xxxs:text-white text-[100px] font-span'>
 												"
 											</h1>
 											<div className='flex flex-col mt-4'>
 												<h1
-													className={`font-sub font-bold xxxs:text-lg tracking-tighter md:text-3xl lg:text-6xl
+													className={` text-white font-sub text-justify font-bold xxxs:text-lg tracking-tighter md:text-3xl lg:text-6xl
 													} hover:text-secondary `}>
 													{testimony.test}
 												</h1>
-												<p className='font-sub mt-4 xxxs:text-md md:text-2xl'>
-													{testimony.author}
-												</p>
-												<p className='font-text xxxs:text-md md:text-2xl'>
-													{testimony.designation}
-												</p>
+												
 											</div>
+											<h1 className='xxxs:text-white font-bold text-[100px] font-span'>
+												"
+											</h1>
 										</div>
 									</div>
 								</Parallax>

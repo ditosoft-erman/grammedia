@@ -22,7 +22,7 @@ export const About: FC = () => {
             </ScrollAnimation> */}
             <ScrollAnimation animateIn="fadeIn" delay={150}>
               <h1 className="font-title font-bold my-3 xxxs:text-2xl lg:text-3xl xl:text-6xl text-white">
-                Who is<span className="gradient-text"> Grammedia?</span>
+                Who drives the creativity at<span className="gradient-text"> Grammedia?</span>
               </h1>
             </ScrollAnimation>
 

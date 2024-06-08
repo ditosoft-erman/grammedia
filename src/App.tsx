@@ -10,7 +10,7 @@ import { SkillsMarquee } from "./components/SkillsMarquee";
 import IntroLanding from './pages/IntroLanding';
 // import { Projects } from "./pages/Projects";
 import { Preloader } from "./pages/Preloader";
-// import { Testimony } from "./pages/Testimony";
+import { Testimony } from "./pages/Testimony";
 import  {FineWorks}  from "./pages/FineWorks";
 import {PromotionalVideo} from "./pages/PromotionalVideo";
 import {Offers} from "./pages/Offers";
@@ -59,7 +59,7 @@ function App() {
 					{/* <Projects /> */}
 				</div>
 				<div id='testimonials'>
-					{/* <Testimony /> */}
+					<Testimony />
 				</div>
 				<div id='contact'>
 					{/* <Certificates />
