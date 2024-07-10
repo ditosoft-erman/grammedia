@@ -8,7 +8,7 @@ import { About } from "./pages/About";
 import { SkillsMarquee } from "./components/SkillsMarquee";
 // import { Achievements } from "./pages/Achievements";
 import IntroLanding from './pages/IntroLanding';
-// import { Projects } from "./pages/Projects";
+ import { Projects } from "./pages/Projects";
 import { Preloader } from "./pages/Preloader";
 import { Testimony } from "./pages/Testimony";
 import  {FineWorks}  from "./pages/FineWorks";
@@ -56,7 +56,7 @@ function App() {
 				</div>
 				<div id='projects'>
 					<Stack />
-					{/* <Projects /> */}
+					<Projects />
 				</div>
 				<div id='testimonials'>
 					<Testimony />

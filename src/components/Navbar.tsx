@@ -34,7 +34,8 @@ export const Navbar: FC = () => {
         className="font-sub text-white bg-black xxxs:hidden md:block fixed  z-10 cursor-pointer w-full h-[5.5rem] pr-2 pt-2 "
       >
         <div className="flex justify-center  gap-4 items-center py-2 px-2">
-          <img src={logo} alt="" />
+          <a href="#home"><img src={logo} alt="" /></a>
+          
           <div className="w-[52rem] border-2 border-slate-200"></div>
           {menu.map((item, idx) => {
             const isHomeLink = item.label === "HOME";

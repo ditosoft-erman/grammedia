@@ -40,13 +40,36 @@ export default {
 				inter: ['Inter', 'sans-serif'],
 			},
 			backgroundImage: {
-				fine: "url('/src/assets/fine-works.png')",
-				'sculpting': "url('/src/assets/gif/continuity.gif')",
-				'viral-editing': "url('/src/assets/gif/editing.gif')",
-				'specific': "url('/src/assets/gif/specific.gif')",
-				'partnership': "url('/src/assets/gif/partnership.gif')",
+				'fine': "url('/src/assets/fine-works.png')",
+        'sculpting': "url('/src/assets/gif/continuity.gif')",
+        'viral-editing': "url('/src/assets/gif/editing.gif')",
+        'specific': "url('/src/assets/gif/specific.gif')",
+        'partnership': "url('/src/assets/gif/partnership.gif')",
 			}
 		},
 	},
-	plugins: [],
+	plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-stroke': {
+          '-webkit-text-stroke': '1px black',
+        },
+        '.text-stroke-0': {
+          '-webkit-text-stroke-width': '0',
+        },
+        '.text-stroke-1': {
+          '-webkit-text-stroke-width': '0.2px',
+        },
+        '.text-stroke-2': {
+          '-webkit-text-stroke-width': '2px',
+        },
+		'.text-stroke-gram': {
+			'-webkit-text-stroke-color': '#00FFF0',
+		},
+   
+      };
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 };

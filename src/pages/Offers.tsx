@@ -1,5 +1,6 @@
 import React from 'react'
 import "./about.css"
+import CardData from "../../src/data/CardData.json";
 
 
 export const Offers: React.FC = () => {
@@ -18,30 +19,17 @@ export const Offers: React.FC = () => {
     </div>
     <div className="card bg-black">
       <div className="cards flex flex-wrap gap-8 m-32 xl:m-20">
-        <div
-          className="w-52 h-52 bg-viral-editing bg-cover bg-white px-16 rounded-md flex justify-center items-center"
-        >
-     
-        </div>
-        <div
-          className="w-52 h-52 bg-sculpting bg-cover bg-white rounded-md px-16 flex justify-center items-center"
-        >
-  
-        </div>
-        <div
-          className="w-52 h-52 bg-partnership bg-cover bg-white rounded-md px-16 flex justify-center items-center"
-        >
-  
-        </div>
-        <div
-          className="w-52 h-52 bg-specific bg-cover bg-white rounded-md px-16 flex justify-center items-center"
-        >
-    
+          {
+            CardData.map((card, index) =>(
+              <div
+          key={index}
+          className={`w-52 h-52 bg-${card.className} bg-cover bg-white rounded-md px-16 flex justify-center items-center`}
+        ></div>
+            ))
+          }
         </div>
       </div>
     </div>
-  </div>
-  
   );
 };
 

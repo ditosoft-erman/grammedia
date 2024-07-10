@@ -1,12 +1,12 @@
 
 export const skills = [
 	{ label: "Adobe Photoshop" },
-	{label: "Figma"},
-	{ label: "Blender" },
 	{label: "Adobe Premiere"},
+	{ label: "Adobe Illustrator" },
+	{label: "Adobe Indesign"},
 	{ label: "Lightworks" },
-	{label: "Adobe Illustrator"},
-	{ label: "Adobe Indesign" },
+	{label: "Blender"},
+	{ label: "Figma" },
 	{label: "Procreate"},
 	{label: "Blender"},
 	{label: "Canva"},

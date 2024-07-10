@@ -1,0 +1,7 @@
+[
+
+        {"className": "bg-[url('/src/assets/gif/continuity.png')]"},
+        {"className": "bg-[url('/src/assets/gif/editing.png')]"},
+        {"className": "bg-[url('/src/assets/gif/specific.png')]"},
+        {"className": "bg-[url('/src/assets/gif/partnership.png')]"}
+  ]
