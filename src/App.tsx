@@ -22,6 +22,7 @@ import Stack from "./pages/Stack";
 // import Jobs from "./pages/Jobs";
 import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "./components/Navbar";
+import Project from "./pages/Project";
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
 					<FineWorks/>
 					<PromotionalVideo/>
 					<Offers/>
+					<Project/>
 			
 					{/* <Jobs />
 					<Achievements />
