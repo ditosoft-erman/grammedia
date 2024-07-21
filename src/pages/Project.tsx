@@ -19,20 +19,22 @@ const Projects: React.FC = () => {
   ];
 
   const [playingVideoId, setPlayingVideoId] = useState<number | null>(null);
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
 
   const handlePlay = (id: number) => {
-
+    // Check if there is a currently playing video and it's not the one being played
     if (playingVideoId !== null && playingVideoId !== id) {
       const currentVideo = videoRefs.current[playingVideoId];
       if (currentVideo) {
-        currentVideo.pause();
-        currentVideo.currentTime = 0; 
+        currentVideo.pause(); // Pause the current video
+        currentVideo.currentTime = 0; // Reset the current video to the beginning
       }
     }
-
+  
+    // Update the state to indicate which video is currently playing
     setPlayingVideoId(id);
   };
+``  
 
   return (
     <div className="bg-black flex flex-col">
@@ -57,55 +59,8 @@ const Projects: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="flex md:flex-wrap flex-nowrap xxxs:space-x-2 sm:space-x-4">
-          {projectData.map((project) => (
-            <div
-              key={project.id}
-              className="bg-reels bg-contain bg-no-repeat w-[15rem] h-[26rem] flex justify-center items-center text-xl text-center rounded-md m-2 transition-transform duration-300 transform hover:scale-105 hover:border-white hover:border-4"
-            >
-              <video
-                className="w-[12.5rem] h-[21rem]"
-                controls
-                ref={(el) => (videoRefs.current[project.id] = el)}
-                onPlay={() => handlePlay(project.id)}
-              >
-                <source src={project.videoSrc} type="video/mp4" />
-              </video>
-            </div>
-            
-          ))}
-        </div>
-        <div className="flex md:flex-wrap flex-nowrap xxxs:space-x-2 sm:space-x-4">
-          {projectData.map((project) => (
-            <div
-              key={project.id}
-              className="bg-reels bg-contain bg-no-repeat w-[15rem] h-[26rem] flex justify-center items-center text-xl text-center rounded-md m-2 transition-transform duration-300 transform hover:scale-105 hover:border-white hover:border-4"
-            >
-              <video
-                className="w-[12.5rem] h-[21rem]"
-                controls
-                ref={(el) => (videoRefs.current[project.id] = el)}
-                onPlay={() => handlePlay(project.id)}
-              >
-                <source src={project.videoSrc} type="video/mp4" />
-              </video>
-            </div>
-          ))}
-        </div>
-        <div className="flex md:flex-wrap flex-nowrap xxxs:space-x-2 sm:space-x-4">
-          {projectData.map((project) => (
-            <div className="bg-reels bg-contain bg-no-repeat w-[15rem] h-[26rem] flex justify-center items-center text-xl text-center round-md m-2 transition-transform duration-300 transform hover:scale-105 hover:border-white hover:border-4">
-              <video
-                className="w-[12.5rem] h-[21rem]"
-                controls
-                ref={(el) => (videoRefs.current[project.id] = el)}
-                onPlay={() => handlePlay(project.id)}
-              >
-                <source src={project.videoSrc} type="video/mp4" />
-              </video>
-            </div>
-          ))}
-        </div>
+        
+        {/* Repeat similar blocks here if needed */}
       </div>
     </div>
   );
