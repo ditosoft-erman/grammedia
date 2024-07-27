@@ -22,25 +22,24 @@ const Projects: React.FC = () => {
   const videoRefs = useRef<{ [key: number]: HTMLVideoElement | null }>({});
 
   const handlePlay = (id: number) => {
-    // Check if there is a currently playing video and it's not the one being played
     if (playingVideoId !== null && playingVideoId !== id) {
       const currentVideo = videoRefs.current[playingVideoId];
       if (currentVideo) {
-        currentVideo.pause(); // Pause the current video
-        currentVideo.currentTime = 0; // Reset the current video to the beginning
+        currentVideo.pause();
+        currentVideo.currentTime = 0;
       }
     }
-  
-    // Update the state to indicate which video is currently playing
+
     setPlayingVideoId(id);
   };
-``  
+  ``;
 
   return (
     <div className="bg-black flex flex-col">
       <h1 className="gradient-text font-bold font-sub xxxs:text-3xl md:text-7xl text-center">
         Projects
       </h1>
+      <div className="title-buttons"></div>
       <div className="flex md:flex-wrap justify-center mt-5 items-center h-screen relative overflow-x-auto">
         <div className="flex md:flex-wrap flex-nowrap xxxs:space-x-2 sm:space-x-4">
           {projectData.map((project) => (
@@ -59,8 +58,6 @@ const Projects: React.FC = () => {
             </div>
           ))}
         </div>
-        
-        {/* Repeat similar blocks here if needed */}
       </div>
     </div>
   );
