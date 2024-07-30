@@ -32,23 +32,21 @@ const Projects: React.FC = () => {
 
     setPlayingVideoId(id);
   };
-  ``;
 
   return (
-    <div className="bg-black flex flex-col">
-      <h1 className="gradient-text font-bold font-sub xxxs:text-3xl md:text-7xl text-center">
+    <div className="bg-black flex flex-col items-center">
+      <h1 className="gradient-text font-bold font-sub xxxs:text-3xl md:text-7xl text-center mb-5">
         Projects
       </h1>
-      <div className="title-buttons"></div>
-      <div className="flex md:flex-wrap justify-center mt-5 items-center h-screen relative overflow-x-auto">
-        <div className="flex md:flex-wrap flex-nowrap xxxs:space-x-2 sm:space-x-4">
+      <div className="relative w-screen overflow-x-auto mt-5">
+        <div className="flex flex-nowrap space-x-4 min-w-max">
           {projectData.map((project) => (
             <div
               key={project.id}
-              className="bg-reels bg-contain bg-no-repeat w-[15rem] h-[26rem] flex justify-center items-center text-xl text-center rounded-md m-2 transition-transform duration-300 transform hover:scale-105 hover:border-white hover:border-4"
+              className="bg-reels bg-cover bg-no-repeat flex justify-center items-center text-xl text-center rounded-md transition-transform duration-300 transform hover:scale-105 hover:border-white hover:border-4 w-[20rem] h-[35rem]"
             >
               <video
-                className="w-[12.5rem] h-[21rem]"
+                className="w-full h-full object-cover"
                 controls
                 ref={(el) => (videoRefs.current[project.id] = el)}
                 onPlay={() => handlePlay(project.id)}
