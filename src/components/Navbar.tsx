@@ -70,16 +70,20 @@ export const Navbar: FC = () => {
         <FaBars
           className="cursor-pointer"
           size={24}
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpen(true)} // Open the menu
         />
       </div>
-      {isOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-full bg-black text-white flex flex-col items-center justify-center z-20">
-          <FaTimes
-            className="absolute top-4 right-4 cursor-pointer"
-            size={24}
-            onClick={() => setIsOpen(false)}
-          />
+      <div
+        className={`fixed top-0 right-0 h-full bg-black text-white transition-transform duration-300 ease-in-out ${
+          isOpen ? "translate-x-0 opacity-90" : "translate-x-full opacity-0"
+        } w-3/4 z-20`}
+      >
+        <FaTimes
+          className="absolute top-4 right-4 cursor-pointer"
+          size={24}
+          onClick={() => setIsOpen(false)} // Close the menu
+        />
+        <div className="flex flex-col items-center justify-center h-full">
           {menu.map((item, idx) => {
             const isHomeLink = item.label === "HOME";
             return (
@@ -100,7 +104,7 @@ export const Navbar: FC = () => {
             );
           })}
         </div>
-      )}
+      </div>
     </div>
   );
 };

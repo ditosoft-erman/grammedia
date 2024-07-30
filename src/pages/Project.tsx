@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import vidReel from "../../src/assets/reels/hormozi.mp4";
-// import vidReel2 from "../../src/assets/reels/hormozi-2.mp4";
-// import vidReel3 from "../../src/assets/reels/hormozi-3.mp4";
+import vidReel from "../../src/assets/reels/hormozi-1.mp4";
+import vidReel2 from "../../src/assets/reels/hormozi-2.mp4";
+import vidReel3 from "../../src/assets/reels/hormozi-3.mp4";
 import vidReel4 from "../../src/assets/reels/hormozi-4.mp4";
 
 interface Project {
@@ -13,8 +13,8 @@ interface Project {
 const Projects: React.FC = () => {
   const projectData: Project[] = [
     { id: 1, title: "Project 1", videoSrc: vidReel },
-    // { id: 2, title: "Project 2", videoSrc: vidReel2 },
-    // { id: 3, title: "Project 3", videoSrc: vidReel3 },
+    { id: 2, title: "Project 2", videoSrc: vidReel2 },
+    { id: 3, title: "Project 3", videoSrc: vidReel3 },
     { id: 4, title: "Project 4", videoSrc: vidReel4 },
   ];
 
