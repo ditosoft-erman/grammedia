@@ -1,0 +1,19 @@
+[
+    {
+        "id": "1",
+        "videoSrc": "vidReel"
+    },
+    {
+        "id": "2",
+        "videoSrc": "vidEstate"
+    },
+    {
+        "id": "3",
+        "videoSrc": "podcast1"
+    },
+    {
+        "id": "4",
+        "videoSrc": "faceless1"
+    }
+    
+]
