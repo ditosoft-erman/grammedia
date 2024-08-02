@@ -45,7 +45,7 @@ export default {
         'viral-editing': "url('/src/assets/gif/editing.gif')",
         'specific': "url('/src/assets/gif/specific.gif')",
         'partnership': "url('/src/assets/gif/partnership.gif')",
-		'reels': "url('/src/assets/Reels.png')"
+		'reels': "url('/src/assets/Reels.jpg')"
 			}
 		},
 	},
