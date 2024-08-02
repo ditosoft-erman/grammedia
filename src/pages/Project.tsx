@@ -1,20 +1,4 @@
 import React, { useState, useRef } from "react";
-import vidReel from "../../src/assets/reels/hormozi-1.mp4";
-// import vidReel2 from "../../src/assets/reels/hormozi-2.mp4";
-// import vidReel3 from "../../src/assets/reels/hormozi-3.mp4";
-// import vidReel4 from "../../src/assets/reels/hormozi-4.mp4";
-import vidReel2 from "../../src/assets/real-estate/real-estate-1.mp4";
-// import vidEstate2 from "../../src/assets/real-estate/real-estate-2.mp4";
-// import vidEstate3 from "../../src/assets/real-estate/real-estate-3.mp4";
-// import vidEstate4 from "../../src/assets/real-estate/real-estate-4.mp4";
-import vidReel3 from "../../src/assets/podcast/podcast-1.mp4";
-// import podcast2 from "../../src/assets/podcast/podcast-2.mp4";
-// import podcast3 from "../../src/assets/podcast/podcast-3.mp4";
-// import podcast4 from "../../src/assets/podcast/podcast-4.mp4";
-// import vidReel4 from "../../src/assets/faceless/faceless-1.mp4";
-// import faceless2 from "../../src/assets/faceless/faceless-2.mp4";
-// import faceless3 from "../../src/assets/faceless/faceless-3.mp4";
-// import faceless4 from "../../src/assets/faceless/faceless-4.mp4";
 
 interface Project {
   id: number;
@@ -24,9 +8,24 @@ interface Project {
 
 const Projects: React.FC = () => {
   const reels: Project[] = [
-    { id: 1, title: "Project 1", videoSrc: vidReel },
-    { id: 2, title: "", videoSrc: vidReel2 },
-    { id: 3, title: "", videoSrc: vidReel3 },
+    {
+      id: 1,
+      title: "Project 1",
+      videoSrc:
+        "https://grammedia-vids.s3.ap-southeast-2.amazonaws.com/hormozi-1.mp4",
+    },
+    {
+      id: 2,
+      title: "",
+      videoSrc:
+        "https://grammedia-vids.s3.ap-southeast-2.amazonaws.com/real-estate-1.mp4",
+    },
+    {
+      id: 3,
+      title: "",
+      videoSrc:
+        "https://grammedia-vids.s3.ap-southeast-2.amazonaws.com/podcast-1.mp4",
+    },
     {
       id: 4,
       title: "",
