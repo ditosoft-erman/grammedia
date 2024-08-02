@@ -38,7 +38,7 @@ export const Preloader: FC = () => {
         className="w-auto h-auto m-auto"
       />
 
-      <div className="flex xxxs:flex-col xxxs:gap-0 md:flex-row md:gap-2 items-center">
+      <div className="flex  xxxs:gap-1 md:flex-row md:gap-2 items-center">
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
