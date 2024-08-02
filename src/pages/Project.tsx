@@ -32,10 +32,6 @@ const Projects: React.FC = () => {
       videoSrc:
         "https://grammedia-vids.s3.ap-southeast-2.amazonaws.com/faceless-1.mp4",
     },
-    // Uncomment these if needed
-    // { id: 2, title: "Project 2", videoSrc: vidReel2 },
-    // { id: 3, title: "Project 3", videoSrc: vidReel3 },
-    // { id: 4, title: "Project 4", videoSrc: vidReel4 },
   ];
 
   const [playingVideoId, setPlayingVideoId] = useState<number | null>(null);
