@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { FaArrowRight } from "react-icons/fa6";
 
 interface Project {
   id: number;
@@ -37,6 +38,13 @@ const Projects: React.FC = () => {
         "https://grammedia-vids.s3.ap-southeast-2.amazonaws.com/faceless-1.mp4",
       link: "https://drive.google.com/drive/folders/1bc09dB7Ce_W2BpQ3lT6Aqrq5x5-0Z9xT?usp=sharing",
     },
+    {
+      id: 5,
+      title: "Cashcow",
+      videoSrc:
+        "https://grammedia-vids.s3.ap-southeast-2.amazonaws.com/cashcow-1.mp4",
+      link: "https://drive.google.com/drive/folders/1ZPMsbiSiCpUyU3mTph3kcjTnwk4UxIH0?usp=drive_link",
+    },
   ];
 
   const [playingVideoId, setPlayingVideoId] = useState<number | null>(null);
@@ -56,7 +64,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className="bg-black flex flex-col items-center">
-      <h1 className="gradient-text font-bold font-sub xxxs:text-3xl md:text-7xl text-center mt-5 p-1">
+      <h1 className="gradient-text font-bold font-sub xxxs:text-6xl md:text-7xl text-center lg:mt-5 p-1">
         Projects
       </h1>
       <div className="relative w-screen overflow-x-auto mt-5">
@@ -77,13 +85,14 @@ const Projects: React.FC = () => {
                 </video>
               </div>
               <div className="flex justify-center items-center p-3 ">
-                <button className="border text-white border-cyan-300 rounded-md p-2 px-6 hover:bg-cyan-300">
+                <button className="flex border  text-white border-cyan-300 rounded-md p-2 px-6  hover:bg-cyan-300">
                   <a
-                    className="underline:none hover:underline:none"
+                    className="flex justify-center items-center gap-x-3 underline:none hover:no-underline"
                     href={project.link}
                     target="_blank"
                   >
                     {project.title}
+                    <FaArrowRight />
                   </a>
                 </button>
               </div>

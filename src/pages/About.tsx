@@ -4,25 +4,21 @@ import allen from "../assets/grammer2.png";
 import ScrollAnimation from "react-animate-on-scroll";
 import { motion } from "framer-motion";
 
-import "./about.css"
-
+import "./about.css";
 
 export const About: FC = () => {
-
-
-
   return (
     <div id="about" className="w-full p-4 bg-black xxxs:h-[650px]">
       <div className="container">
         <div className="flex row items-center justify-around ">
-        
           <div className="col col-lg-5 pt-14">
             {/* <ScrollAnimation animateIn="fadeIn" delay={50}>
               <p className="font-head font-semibold">Hi! I'm</p>
             </ScrollAnimation> */}
             <ScrollAnimation animateIn="fadeIn" delay={150}>
-              <h1 className="font-title text-left font-bold my-3 xxxs:text-3xl xxxs:text-center lg:text-3xl xl:text-5xl text-white">
-                Who drives the creativity at<span className="gradient-text"> Grammedia?</span>
+              <h1 className="font-title text-left font-bold my-3 xxxs:text-2xl xxxs:text-center lg:text-3xl xl:text-5xl text-white">
+                Who drives the creativity at
+                <span className="gradient-text"> Grammedia?</span>
               </h1>
             </ScrollAnimation>
 
@@ -35,16 +31,14 @@ export const About: FC = () => {
                 valuable resources and support.
               </p>
             </ScrollAnimation>
-           
           </div>
-		    <div className="xxxs:col col-span-1 md:col col-md-4">
+          <div className="xxxs:col col-span-1 md:col col-md-4">
             <motion.img
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 0.9 }}
               src={allen}
               alt="Grammer Allen"
-              style={{ width: "450px", height: "500px"  }}
-          
+              style={{ width: "450px", height: "500px" }}
             />
           </div>
         </div>
