@@ -31,7 +31,7 @@ export const Preloader: FC = () => {
       <motion.img
         animate={{
           transition: { duration: 4.01, repeat: Infinity, ease: "linear" },
-          scale: [1, 1.2, 1], // Zoom in (1.2) and then back to normal (1)
+          scale: [1, 1.2, 1],
         }}
         src={grammedia}
         alt="Grammedia"

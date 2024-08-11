@@ -1,16 +1,23 @@
 [
- {
-  "label": "HOME",
-  "link": ""
- },
+  {
+    "label": "HOME",
+    "link": ""
+  },
 
- {
-  "label": "RESUME",
-  "link": "https://drive.google.com/file/d/1-TWBTeQvAG2Pc65IKgG-7DNUSvE2z9xW/view?usp=drive_link"
- },
- {
-  "label": "CONTACTS",
-  "link": "contact"
- }
-
+  {
+    "label": "RESUME",
+    "link": "https://drive.google.com/file/d/1-TWBTeQvAG2Pc65IKgG-7DNUSvE2z9xW/view?usp=drive_link"
+  },
+  {
+    "label": "PROJECTS",
+    "link": "#projects"
+  },
+  {
+    "label": "TESTIMONY",
+    "link": "<testimony>"
+  },
+  {
+    "label": "CONTACTS",
+    "link": "contact"
+  }
 ]

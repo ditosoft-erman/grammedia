@@ -9,7 +9,7 @@ import "./about.css";
 export const About: FC = () => {
   return (
     <div id="about" className="w-full p-4 bg-black xxxs:h-[650px]">
-      <div className="container">
+      <div className="container flex justify-center items-center">
         <div className="flex row items-center justify-around ">
           <div className="col col-lg-5 pt-14">
             {/* <ScrollAnimation animateIn="fadeIn" delay={50}>
