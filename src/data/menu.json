@@ -1,7 +1,7 @@
 [
   {
     "label": "HOME",
-    "link": ""
+    "link": "#parent"
   },
 
   {
@@ -10,11 +10,11 @@
   },
   {
     "label": "PROJECTS",
-    "link": "#projects"
+    "link": "#project"
   },
   {
     "label": "TESTIMONY",
-    "link": "<testimony>"
+    "link": "#testimonials"
   },
   {
     "label": "CONTACTS",
