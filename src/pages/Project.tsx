@@ -70,7 +70,15 @@ const Projects: React.FC = () => {
       <div className="relative w-screen overflow-x-auto mt-5">
         <div className="flex flex-nowrap justify-center items-center space-x-10 min-w-max mt-5 p-5">
           {reels.map((project) => (
-            <div className="innerHeight">
+            <div className="innerHeigh">
+              <div className="flex justify-center items-center p-3 ">
+                <div
+                  className="gradient-text text-2xl font-bold
+                "
+                >
+                  {project.title}
+                </div>
+              </div>
               <div
                 key={project.id}
                 className="bg-reels bg-cover bg-no-repeat w-[16rem] h-[28rem] flex justify-center items-center text-xl text-center rounded-md transition-transform duration-300 transform hover:scale-105 hover:border-white hover:border-4"
@@ -91,7 +99,7 @@ const Projects: React.FC = () => {
                     href={project.link}
                     target="_blank"
                   >
-                    {project.title}
+                    <h1>MORE</h1>
                     <FaArrowRight />
                   </a>
                 </button>
