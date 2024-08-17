@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
           "service_s6oxlgg",
           "template_1m3235e",
           form.current,
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+          "sYXAhOx8N_jNI0Tcg"
         )
         .then(
           () => {
