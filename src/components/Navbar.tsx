@@ -24,6 +24,37 @@ export const Navbar: FC = () => {
     }, 3000);
   }, [direction, controls]);
 
+  // const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //   e.preventDefault();
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  //   setIsOpen(false);
+  // };
+
+  // const handleProjectsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //   e.preventDefault();
+  //   window.scrollTo({ top: 2450, behavior: "smooth" });
+  //   setIsOpen(false);
+  // };
+
+  // const handleTestimonyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //   e.preventDefault();
+  //   window.scrollTo({ top: 3870, behavior: "smooth" });
+  //   setIsOpen(false);
+  // };
+
+  // const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //   e.preventDefault();
+  //   window.scrollTo({ top: 5670, behavior: "smooth" });
+  //   setIsOpen(false);
+  // };
+  const handleScrollToSection = (id: string) => {
+    const section = document.querySelector(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
+
   const handleHomeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -32,13 +63,19 @@ export const Navbar: FC = () => {
 
   const handleProjectsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.scrollTo({ top: 2450, behavior: "smooth" });
+    handleScrollToSection("#project");
     setIsOpen(false);
   };
 
   const handleTestimonyClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    window.scrollTo({ top: 3870, behavior: "smooth" });
+    handleScrollToSection("#testimonials");
+    setIsOpen(false);
+  };
+
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    handleScrollToSection("#contact");
     setIsOpen(false);
   };
 
@@ -51,7 +88,7 @@ export const Navbar: FC = () => {
           duration: 0.5,
           delay: 0.64,
         }}
-        className="font-sub text-white bg-black xxxs:hidden md:block fixed z-10 cursor-pointer w-full h-[5.5rem] pr-2 pt-2"
+        className="font-sub text-white bg-black  md:block fixed z-10 cursor-pointer w-full h-[5.5rem] pr-2 pt-2"
       >
         <div className="flex justify-center gap-4 items-center py-2 px-2">
           <a href="#home" onClick={handleHomeClick}>
@@ -63,6 +100,7 @@ export const Navbar: FC = () => {
             const isHomeLink = item.label === "HOME";
             const isProjectsLink = item.label === "PROJECTS";
             const isTestimonyLink = item.label === "TESTIMONY";
+            const isContactLink = item.label === "CONTACTS";
             return (
               <a
                 key={idx}
@@ -73,6 +111,8 @@ export const Navbar: FC = () => {
                     ? "#project"
                     : isTestimonyLink
                     ? "#testimonials"
+                    : isContactLink
+                    ? "#contacts"
                     : item.link
                 }
                 onClick={
@@ -82,6 +122,8 @@ export const Navbar: FC = () => {
                     ? handleProjectsClick
                     : isTestimonyLink
                     ? handleTestimonyClick
+                    : isContactLink
+                    ? handleContactClick
                     : (e) => {
                         if (!item.link.startsWith("#")) {
                           e.preventDefault();
@@ -111,13 +153,13 @@ export const Navbar: FC = () => {
         />
       </div>
       <div
-        className={`fixed top-0 right-0 h-full bg-black text-white transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full bg-black text-white transition-transform duration-200 ease-in-out ${
           isOpen ? "translate-x-0 opacity-90" : "translate-x-full opacity-0"
-        } w-3/4 z-20`}
+        } w-3/4 z-10`}
       >
         <FaTimes
           className="absolute top-4 right-4 cursor-pointer"
-          size={24}
+          size={34}
           onClick={() => setIsOpen(false)}
         />
         <div className="flex flex-col items-center justify-center h-full">
@@ -125,6 +167,7 @@ export const Navbar: FC = () => {
             const isHomeLink = item.label === "HOME";
             const isProjectsLink = item.label === "PROJECTS";
             const isTestimonyLink = item.label === "TESTIMONY";
+            const isContactLink = item.label === "CONTACTS";
             return (
               <a
                 key={idx}
@@ -135,6 +178,8 @@ export const Navbar: FC = () => {
                     ? "#project"
                     : isTestimonyLink
                     ? "#testimonial"
+                    : isContactLink
+                    ? "#contacts"
                     : item.link
                 }
                 onClick={
@@ -144,6 +189,8 @@ export const Navbar: FC = () => {
                     ? handleProjectsClick
                     : isTestimonyLink
                     ? handleTestimonyClick
+                    : isContactLink
+                    ? handleContactClick
                     : (e) => {
                         if (!item.link.startsWith("#")) {
                           e.preventDefault();
