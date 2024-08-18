@@ -1,6 +1,6 @@
 import { FC } from "react";
-import allen from "../assets/grammer2.png";
 import ScrollAnimation from "react-animate-on-scroll";
+
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import "./about.css";
@@ -47,7 +47,7 @@ export const About: FC = () => {
             <StyledImage
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 0.9 }}
-              src={allen}
+              src="https://grammedia-vids.s3.ap-southeast-2.amazonaws.com/grammer2.png"
               alt="Grammer Allen"
             />
           </div>
