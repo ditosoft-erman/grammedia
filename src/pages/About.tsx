@@ -48,7 +48,7 @@ export const About: FC = () => {
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 0.9 }}
               src="https://grammedia-vids.s3.ap-southeast-2.amazonaws.com/grammer2.png"
-              alt="Grammer Allenn"
+              alt="Grammer Allen"
             />
           </div>
         </div>
