@@ -47,10 +47,18 @@ export const Navbar: FC = () => {
   //   window.scrollTo({ top: 5670, behavior: "smooth" });
   //   setIsOpen(false);
   // };
-  const handleScrollToSection = (id: string) => {
+  const handleScrollToSection = (id: string, offset: number = 0) => {
     const section = document.querySelector(id);
+
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+
+      // Scroll to the section with an offset
+      window.scrollTo({
+        top: sectionTop - offset,
+        behavior: "smooth",
+      });
+
       setIsOpen(false);
     }
   };
@@ -63,7 +71,7 @@ export const Navbar: FC = () => {
 
   const handleProjectsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    handleScrollToSection("#project");
+    handleScrollToSection("#project", -150);
     setIsOpen(false);
   };
 
@@ -75,7 +83,7 @@ export const Navbar: FC = () => {
 
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    handleScrollToSection("#contact");
+    handleScrollToSection("#contact", -55);
     setIsOpen(false);
   };
 
