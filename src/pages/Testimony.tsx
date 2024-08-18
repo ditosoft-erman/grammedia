@@ -27,7 +27,7 @@ export const Testimony: FC = () => {
   }, []);
 
   return (
-    <div className="w-full h-full bg-black" id="testimony">
+    <div className="w-full h-full bg-black overflow-x-hidden" id="testimony">
       <div className="container">
         <h1 className="gradient-text font-bold p-28 font-sub xxxs:text-3xl  md:text-7xl text-center ">
           Testimonials
