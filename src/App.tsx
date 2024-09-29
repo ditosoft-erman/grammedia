@@ -23,6 +23,7 @@ import Stack from "./pages/Stack";
 import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "./components/Navbar";
 import Project from "./pages/Project";
+import Footer from "./pages/Footer";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -69,6 +70,7 @@ function App() {
         </div>
         <Analytics />
         <About />
+        <Footer />
       </div>
     </>
   );
