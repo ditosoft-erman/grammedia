@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className="bg-black p-10">
-      <div className="flex justify-center items-center mt-8 p-8 h-screen bg-black text-white">
+      <div className="flex justify-end items-center mt-8 p-8 h-screen bg-black text-white">
         <StyledContactForm>
           <form ref={form} onSubmit={sendEmail}>
             <div className="flex space-x-3">
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
             </div>
             <label>PROJECT DESCRIPTION</label>
             <textarea name="project_description_message" required />
-            <label>HOW DID YOU HEAR ABOUT US?</label>
+            <label>HOW DID YOU HEAR ABOUT ME?</label>
             <textarea name="how_did_you_hear_about_us_message" />
             <input
               className="bg-cyan-300 hover:bg-cyan-900"
