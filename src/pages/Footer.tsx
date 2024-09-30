@@ -1,12 +1,43 @@
 import logo from "../assets/grammedia-logo.png";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   AiFillInstagram,
   AiFillFacebook,
   AiFillTwitterCircle,
   AiFillLinkedin,
+  AiOutlineWhatsApp,
 } from "react-icons/ai";
 
 export default function Footer() {
+  const phoneNumber = "+639 09912 9159";
+
+  const handleCopyToClipboard = () => {
+    navigator.clipboard
+      .writeText(phoneNumber)
+      .then(() => {
+        toast.success("Contact number copied to clipboard!", {
+          position: "top-center", // Use string for position
+          autoClose: 1000, // Set time in milliseconds
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+      })
+      .catch((err) => {
+        toast.error("Failed to copy contact number!", {
+          position: "bottom-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+        console.error("Could not copy text: ", err);
+      });
+  };
+
   return (
     <>
       <div className="bg-black text-white">
@@ -37,6 +68,7 @@ export default function Footer() {
                 <a
                   className="mb-1"
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.facebook.com/profile.php?id=61552804718480"
                 >
                   <AiFillFacebook size={30} />
@@ -47,21 +79,40 @@ export default function Footer() {
                 <a
                   className="mb-1"
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.instagram.com/grammediaofficial/"
                 >
                   <AiFillInstagram size={30} />
                 </a>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.linkedin.com/in/grammer-allen-49a513304/"
                 >
                   <AiFillLinkedin size={30} />
+                </a>
+                <a
+                  onClick={handleCopyToClipboard}
+                  style={{ cursor: "pointer" }}
+                >
+                  <AiOutlineWhatsApp size={30} />
                 </a>
               </div>
             </div>
           </div>
         </footer>
       </div>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }
